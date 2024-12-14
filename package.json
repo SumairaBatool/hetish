@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "this is huge project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon inddex.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chai",
+    "and",
+    "backend"
+  ],
+  "author": "sumaira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.0"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2"
+  }
+}
