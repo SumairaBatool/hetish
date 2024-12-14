@@ -1,0 +1,11 @@
+<!-- if any body foget to add semi colen then usedd pritter wchich help to controll conflicts -->
+
+
+{
+    "singleQuotes":false,
+    "bracketSpacing":true,
+    "tabwidth":2,
+    trailingComma":"es5",
+    "semi":true
+    
+}
