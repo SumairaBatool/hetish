@@ -3,6 +3,7 @@
 
 import dotenv from "dotenv"
 import connectdb from "./database/index.js";
+import {app} from "./app.js"
 // introduce recently
 dotenv.config({
     path: './env'
@@ -10,6 +11,18 @@ dotenv.config({
 
 
 connectdb()
+.then(()=>{
+    app.on("ERROR:",(error)=>{
+        console.log("error:",error);
+        throw error;
+    })
+    app.listen(process.env.PORT||8000,()=>{
+        console.log(`app running at port ${process.env.PORT}`);
+    })
+})
+.catch((err)=>{
+    console.log("mongo db connection faile!!!1",err);
+})
 
 
 
@@ -19,7 +32,7 @@ connectdb()
 
 
 
-
+                    // ****first way to connect with db****//
 // import express from "express"
 // const app=express()
 // ;const connectdb=(async()=>{
